@@ -90,8 +90,11 @@ class Fase():
         :param angulo: ângulo de lançamento
         :param tempo: Tempo de lançamento
         """
-        pass
-
+        for passaro in self.passaros:
+            if not self.passaro.foi_lancado():
+                passaro.lancar(angulo, tempo)
+                break
+                
     def calcular_pontos(self, tempo):
         """
         Lógica que retorna os pontos a serem exibidos na tela.
